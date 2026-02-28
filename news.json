@@ -1,0 +1,15 @@
+{
+  "date": "28 Febrero 2026",
+  "news": [
+    {
+      "title": "Nuevo anime anunciado para 2026",
+      "summary": "Un estudio japonés confirma una nueva adaptación muy esperada por los fans del anime.",
+      "link": "https://example.com"
+    },
+    {
+      "title": "Trailer oficial revela nueva temporada",
+      "summary": "La popular serie regresa con animación mejorada y estreno confirmado.",
+      "link": "https://example.com"
+    }
+  ]
+}
