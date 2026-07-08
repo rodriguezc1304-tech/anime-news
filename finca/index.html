@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Finca La Cosecha Dominicana | Fruta fresca a domicilio</title>
+
+<meta name="description"
+content="Compra fruta fresca directo de nuestra finca en República Dominicana. Mango, piña, lechosa, aguacate, coco y más, con entrega a domicilio.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo">🌴 Finca La Cosecha Dominicana</a>
+    <nav class="nav">
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button id="cart-toggle" class="cart-toggle" aria-label="Abrir carrito">
+      🛒 <span id="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<section id="top" class="hero">
+  <div class="hero-content">
+    <h1>Fruta fresca, directo de nuestra finca a tu mesa</h1>
+    <p>Cultivada con cariño en el corazón de República Dominicana. Sin intermediarios, con toda la frescura del campo.</p>
+    <a href="#productos" class="btn btn-primary">Ver productos</a>
+  </div>
+</section>
+
+<section id="nosotros" class="nosotros">
+  <h2>Sobre nuestra finca</h2>
+  <p>
+    Somos una finca familiar ubicada en República Dominicana, dedicada al cultivo
+    de fruta tropical de la más alta calidad. Cosechamos cada fruta en su punto
+    óptimo de madurez y la llevamos directo a tu hogar o negocio, garantizando
+    frescura, sabor y precios justos.
+  </p>
+</section>
+
+<section id="productos" class="productos">
+  <h2>Nuestros productos</h2>
+  <p class="productos-sub">Precios en pesos dominicanos (RD$)</p>
+  <div id="productos-grid" class="productos-grid"></div>
+</section>
+
+<section id="como-comprar" class="como-comprar">
+  <h2>¿Cómo comprar?</h2>
+  <ol>
+    <li>Agrega las frutas que quieras a tu carrito.</li>
+    <li>Revisa tu pedido y haz clic en "Pedir por WhatsApp".</li>
+    <li>Coordina la entrega o recogida directamente con nosotros.</li>
+  </ol>
+</section>
+
+<section id="contacto" class="contacto">
+  <h2>Contacto</h2>
+  <p>📍 República Dominicana</p>
+  <p>📞 WhatsApp: <span id="telefono-contacto">EDITAR-TU-NUMERO</span></p>
+  <p>✉️ correo@tufinca.com</p>
+</section>
+
+<footer class="site-footer">
+  <p>© 2026 Finca La Cosecha Dominicana</p>
+</footer>
+
+<!-- Carrito lateral -->
+<aside id="cart-panel" class="cart-panel">
+  <div class="cart-header">
+    <h2>Tu carrito</h2>
+    <button id="cart-close" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <p class="cart-total">Total: <span id="cart-total">RD$ 0</span></p>
+    <button id="checkout-btn" class="btn btn-primary btn-block">Pedir por WhatsApp</button>
+  </div>
+</aside>
+<div id="cart-overlay" class="cart-overlay"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
