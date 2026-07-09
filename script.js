@@ -1,10 +1,35 @@
-const CATEGORY_ICONS = {
-  pelo: "💇‍♀️",
-  lenceria: "👙",
-  ropa: "👕",
-  zapatillas: "👟",
-  bolsos: "👜",
-  perfumes: "🌸"
+const CATEGORY_ART = {
+  pelo: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 12c-16 0-24 14-22 30 1 10-4 16-6 24 6-2 10-6 12-12 2 10 4 18 2 26 6-4 9-12 10-20 2 8 5 15 4 22 6-5 8-13 8-22 3 7 6 13 5 21 6-6 8-15 7-24 2-8-2-22-20-45z" fill="#5c3a21"/>
+    <path d="M50 12c-16 0-24 14-22 30 1 10-4 16-6 24 6-2 10-6 12-12 2 10 4 18 2 26 6-4 9-12 10-20 2 8 5 15 4 22 6-5 8-13 8-22 3 7 6 13 5 21 6-6 8-15 7-24 2-8-2-22-20-45z" fill="none" stroke="#3d2716" stroke-width="1.5"/>
+    <ellipse cx="50" cy="20" rx="10" ry="6" fill="#ff6f59"/>
+  </svg>`,
+  lenceria: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 30c14 6 22 18 24 32 2-4 4-8 4-8s2 4 4 8c2-14 10-26 24-32-2 16-10 26-20 30-3 1-5 5-8 5s-5-4-8-5c-10-4-18-14-20-30z" fill="#ff8fb3"/>
+    <path d="M42 62l8 0" stroke="#e8608a" stroke-width="2" stroke-linecap="round"/>
+    <path d="M4 34c4-6 8-8 10-8M96 34c-4-6-8-8-10-8" stroke="#0fb9b1" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </svg>`,
+  ropa: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M35 18l15 8 15-8 15 12-8 12-7-4v42H35V38l-7 4-8-12z" fill="#2ec4b6"/>
+    <path d="M35 18l15 8 15-8" fill="none" stroke="#0e8f8f" stroke-width="2"/>
+  </svg>`,
+  zapatillas: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10 65c0-6 6-10 14-12l20-6c6-2 10-6 16-10l14-8c6-4 12 0 12 6v10c10 2 14 8 14 14v6H10z" fill="#ff6f59"/>
+    <path d="M10 65h80" stroke="#c94a36" stroke-width="3"/>
+    <path d="M44 47l10 4M56 43l9 5" stroke="#ffffff" stroke-width="2"/>
+  </svg>`,
+  bolsos: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M36 36c0-10 6-16 14-16s14 6 14 16" fill="none" stroke="#a0522d" stroke-width="5" stroke-linecap="round"/>
+    <rect x="20" y="36" width="60" height="42" rx="4" fill="#ffb98a"/>
+    <rect x="20" y="36" width="60" height="10" rx="2" fill="#ff9a5c"/>
+    <rect x="46" y="50" width="8" height="8" rx="1.5" fill="#c9702f"/>
+  </svg>`,
+  perfumes: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="12" width="20" height="12" rx="3" fill="#0e8f8f"/>
+    <rect x="45" y="6" width="10" height="8" rx="2" fill="#134e4a"/>
+    <path d="M32 24h36l4 8v46a6 6 0 0 1-6 6H34a6 6 0 0 1-6-6V32z" fill="#93ecd3"/>
+    <path d="M32 24h36l4 8H28z" fill="#5fd6c8"/>
+  </svg>`
 };
 
 let STORE = null;
@@ -85,7 +110,7 @@ function renderProducts() {
     });
 
     card.innerHTML = `
-      <div class="card-image">${CATEGORY_ICONS[product.category] || "🛍️"}</div>
+      <div class="card-image cat-${product.category}">${CATEGORY_ART[product.category] || ""}</div>
       <span class="category-tag">${categoryLabel(product.category)}</span>
       <h2>${product.name}</h2>
       ${priceHtml(product)}
