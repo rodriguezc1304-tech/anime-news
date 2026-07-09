@@ -1,0 +1,131 @@
+{
+  "store": {
+    "name": "D'Fashion Cristal",
+    "tagline": "Pelo, ropa, zapatillas, bolsos y perfumes",
+    "address": "Los Cacaítos, Carretera Medina, San Cristóbal, República Dominicana",
+    "whatsapp": "18493502605"
+  },
+  "categories": [
+    { "id": "pelo", "label": "Pelo y Postizos" },
+    { "id": "lenceria", "label": "Ropa Íntima y Bikinis" },
+    { "id": "ropa", "label": "Ropa" },
+    { "id": "zapatillas", "label": "Zapatillas" },
+    { "id": "bolsos", "label": "Bolsos y Carteras" },
+    { "id": "perfumes", "label": "Perfumes" }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": "Extensiones de pelo 100% humano",
+      "category": "pelo",
+      "price": null,
+      "options": { "Largo": ["16\"", "18\"", "20\"", "22\"", "24\""] },
+      "image": "",
+      "note": "Precio según largo, consultar por WhatsApp"
+    },
+    {
+      "id": "p2",
+      "name": "Postizo bucle para mujer",
+      "category": "pelo",
+      "price": 1800,
+      "options": { "Color": ["Negro", "Castaño", "Rubio"] },
+      "image": "",
+      "note": "Precio de referencia, confirmar disponibilidad"
+    },
+    {
+      "id": "p3",
+      "name": "Sujetadores variedad de modelos",
+      "category": "lenceria",
+      "price": 190,
+      "priceMax": 300,
+      "options": { "Talla": ["Copa A", "Copa B", "Copa C"] },
+      "image": "",
+      "note": "Desde RD$190 hasta RD$300 según modelo"
+    },
+    {
+      "id": "p4",
+      "name": "Panty (blúmer)",
+      "category": "lenceria",
+      "price": 195,
+      "options": { "Talla": ["65", "75", "85", "90"] },
+      "image": ""
+    },
+    {
+      "id": "p5",
+      "name": "Bikini de mujer (conjunto)",
+      "category": "lenceria",
+      "price": null,
+      "options": { "Talla": ["S", "M", "L"] },
+      "image": "",
+      "note": "Precio a confirmar por WhatsApp"
+    },
+    {
+      "id": "p6",
+      "name": "Camisa/Blusa estampada",
+      "category": "ropa",
+      "price": null,
+      "options": { "Talla": ["S", "M", "L", "XL"] },
+      "image": "",
+      "note": "Precio a confirmar por WhatsApp"
+    },
+    {
+      "id": "p7",
+      "name": "Boxer para hombre",
+      "category": "ropa",
+      "price": null,
+      "options": { "Talla": ["S", "M", "L", "XL"] },
+      "image": "",
+      "note": "Precio a confirmar por WhatsApp"
+    },
+    {
+      "id": "p8",
+      "name": "Tenis deportivos para mujer",
+      "category": "zapatillas",
+      "price": 450,
+      "options": { "Talla": ["36", "37", "38", "39", "40"] },
+      "image": ""
+    },
+    {
+      "id": "p9",
+      "name": "Tenis deportivos para hombre (originales)",
+      "category": "zapatillas",
+      "price": 1000,
+      "options": { "Talla": ["40", "41", "42", "43", "44"] },
+      "image": "",
+      "note": "Stock limitado"
+    },
+    {
+      "id": "p10",
+      "name": "Bolso tote negro",
+      "category": "bolsos",
+      "price": 550,
+      "options": {},
+      "image": ""
+    },
+    {
+      "id": "p11",
+      "name": "Bolso tote morado",
+      "category": "bolsos",
+      "price": 600,
+      "options": {},
+      "image": ""
+    },
+    {
+      "id": "p12",
+      "name": "Bolso tote rosado",
+      "category": "bolsos",
+      "price": 700,
+      "options": {},
+      "image": ""
+    },
+    {
+      "id": "p13",
+      "name": "Colonia importada (oferta)",
+      "category": "perfumes",
+      "price": 350,
+      "options": {},
+      "image": "",
+      "note": "Buena calidad, importadas"
+    }
+  ]
+}

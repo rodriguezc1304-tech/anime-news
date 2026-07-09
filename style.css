@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 body {
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,47 +9,299 @@ body {
 
 header {
   text-align:center;
-  padding:30px;
+  padding:24px 16px;
   background:#020617;
 }
 
+header h1 { margin:0 0 6px; font-size:1.6rem; }
+
 .subtitle {
   color:#94a3b8;
+  margin:0 0 6px;
 }
 
-.intro {
-  max-width:900px;
-  margin:auto;
-  padding:20px;
-  text-align:center;
+.address {
+  color:#f472b6;
+  margin:0;
+  font-size:0.95rem;
 }
 
-#news-container {
-  max-width:900px;
+.filters {
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#0f172a;
+  padding:10px 12px;
+  border-bottom:1px solid #1e293b;
+}
+
+.filter-row {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:center;
+}
+
+.filter-btn {
+  background:#1e293b;
+  color:white;
+  border:1px solid #334155;
+  border-radius:20px;
+  padding:8px 14px;
+  font-size:0.85rem;
+  cursor:pointer;
+}
+
+.filter-btn.active {
+  background:#ec4899;
+  border-color:#ec4899;
+}
+
+#products-container {
+  max-width:1100px;
   margin:auto;
   padding:20px;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:16px;
+}
+
+@media (min-width:640px) {
+  #products-container { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width:960px) {
+  #products-container { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 .card {
   background:#1e293b;
-  padding:20px;
-  margin-bottom:20px;
+  padding:18px;
   border-radius:12px;
-  transition:0.3s;
+  transition:0.2s;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 
 .card:hover {
   transform:translateY(-3px);
 }
 
-.card h2 {
-  margin-top:0;
+.card-image {
+  height:140px;
+  border-radius:8px;
+  background:#0f172a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2.5rem;
 }
 
-a {
-  color:#22d3ee;
-  text-decoration:none;
+.card h2 {
+  margin:0;
+  font-size:1.05rem;
+}
+
+.card .category-tag {
+  font-size:0.75rem;
+  color:#94a3b8;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+.card .price {
+  font-size:1.2rem;
   font-weight:bold;
+  color:#4ade80;
+}
+
+.card .price.consultar {
+  color:#fbbf24;
+  font-size:1rem;
+}
+
+.card .note {
+  font-size:0.8rem;
+  color:#94a3b8;
+  font-style:italic;
+  margin:0;
+}
+
+.card select {
+  background:#0f172a;
+  color:white;
+  border:1px solid #334155;
+  border-radius:6px;
+  padding:6px;
+  font-size:0.85rem;
+}
+
+.card .option-group {
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  font-size:0.8rem;
+  color:#cbd5e1;
+}
+
+.card-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:auto;
+}
+
+.btn {
+  flex:1;
+  text-align:center;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+  font-size:0.85rem;
+}
+
+.btn-ask {
+  background:#22d3ee;
+  color:#020617;
+}
+
+.btn-reserve {
+  background:#ec4899;
+  color:white;
+}
+
+.compare-check {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:0.8rem;
+  color:#cbd5e1;
+}
+
+a { color:#22d3ee; }
+
+.info-block {
+  max-width:900px;
+  margin:20px auto;
+  padding:0 20px;
+}
+
+.info-block h2 {
+  font-size:1.2rem;
+  border-bottom:2px solid #ec4899;
+  display:inline-block;
+  padding-bottom:4px;
+}
+
+.info-block ul {
+  line-height:1.8;
+  padding-left:20px;
+}
+
+.compare-bar {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#020617;
+  border-top:1px solid #334155;
+  padding:10px 16px;
+  display:none;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  z-index:20;
+}
+
+.compare-bar.visible { display:flex; }
+
+.compare-bar button {
+  background:#ec4899;
+  color:white;
+  border:none;
+  border-radius:8px;
+  padding:8px 14px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+#compare-clear {
+  background:transparent;
+  border:1px solid #64748b;
+}
+
+.modal-overlay {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  z-index:30;
+  align-items:center;
+  justify-content:center;
+  padding:16px;
+}
+
+.modal-overlay.visible { display:flex; }
+
+.modal {
+  background:#1e293b;
+  border-radius:12px;
+  padding:20px;
+  max-width:700px;
+  width:100%;
+  max-height:80vh;
+  overflow-y:auto;
+  position:relative;
+}
+
+.modal-close {
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:none;
+  border:none;
+  color:white;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+
+.table-scroll {
+  overflow-x:auto;
+}
+
+#compare-table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+#compare-table td, #compare-table th {
+  border:1px solid #334155;
+  padding:8px;
+  text-align:left;
+  font-size:0.85rem;
+  white-space:nowrap;
+}
+
+#whatsapp-float {
+  position:fixed;
+  bottom:70px;
+  right:16px;
+  background:#25d366;
+  color:white;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.6rem;
+  text-decoration:none;
+  box-shadow:0 4px 10px rgba(0,0,0,0.4);
+  z-index:25;
 }
 
 footer {
@@ -55,4 +309,5 @@ footer {
   padding:20px;
   background:#020617;
   margin-top:40px;
+  padding-bottom:90px;
 }

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Anime Daily News | Noticias Anime Hoy</title>
+<title>D'Fashion Cristal | Pelo, Ropa, Zapatillas y Perfumes en San Cristóbal</title>
 
 <meta name="description"
-content="Resumen diario con las noticias anime más importantes del mundo. Estrenos, anuncios y novedades del anime cada día.">
+content="D'Fashion Cristal - Los Cacaítos, Carretera Medina, San Cristóbal. Pelo y postizos, ropa, zapatillas, bolsos y perfumes. Pregunta y reserva por WhatsApp.">
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -15,23 +15,59 @@ content="Resumen diario con las noticias anime más importantes del mundo. Estre
 <body>
 
 <header>
-<h1>🌏 Anime Daily News</h1>
-<p class="subtitle">Las 10 noticias más importantes del anime cada día</p>
-<p id="date"></p>
+<h1 id="store-name">D'Fashion Cristal</h1>
+<p class="subtitle" id="store-tagline">Pelo, ropa, zapatillas, bolsos y perfumes</p>
+<p class="address" id="store-address">📍 Los Cacaítos, Carretera Medina, San Cristóbal, R.D.</p>
 </header>
 
-<section class="intro">
-<h2>Resumen diario del anime</h2>
-<p>
-Noticias anime actualizadas diariamente: nuevos estrenos,
-anuncios oficiales, mangas y novedades del anime mundial resumidas rápidamente.
-</p>
+<nav class="filters">
+<div class="filter-row" id="category-filters">
+<button class="filter-btn active" data-category="todos">Todos</button>
+</div>
+</nav>
+
+<main id="products-container"></main>
+
+<section class="info-block">
+<h2>Métodos de pago</h2>
+<ul>
+<li>💵 Pago contra entrega (efectivo al recibir)</li>
+<li>🏦 Transferencia bancaria — Banreservas, Popular o BHD (los datos se envían al confirmar el pedido por WhatsApp)</li>
+<li>💳 Tarjeta de crédito/débito (Cardnet / Azul) — próximamente</li>
+</ul>
 </section>
 
-<main id="news-container"></main>
+<section class="info-block">
+<h2>Envíos y delivery</h2>
+<ul>
+<li>🛵 Delivery local: Los Cacaítos y zonas cercanas de San Cristóbal</li>
+<li>📦 Envíos nacionales: Caribe Pack, Metro Pac o Vimenpaq (a coordinar por WhatsApp)</li>
+</ul>
+</section>
+
+<div class="compare-bar" id="compare-bar">
+<span id="compare-count">0 productos seleccionados</span>
+<button id="compare-btn">Ver comparación</button>
+<button id="compare-clear">Limpiar</button>
+</div>
+
+<div class="modal-overlay" id="compare-modal">
+<div class="modal">
+<button class="modal-close" id="modal-close">✕</button>
+<h2>Comparar productos</h2>
+<div class="table-scroll">
+<table id="compare-table"></table>
+</div>
+</div>
+</div>
+
+<a id="whatsapp-float" href="#" target="_blank" aria-label="Chatear por WhatsApp">💬</a>
 
 <footer>
-<p>© 2026 Anime Daily News</p>
+<p><strong id="footer-store-name">D'Fashion Cristal</strong></p>
+<p id="footer-address">Los Cacaítos, Carretera Medina, San Cristóbal, R.D.</p>
+<p>WhatsApp: <a id="footer-whatsapp" href="#" target="_blank">Escríbenos</a></p>
+<p>© 2026 D'Fashion Cristal</p>
 </footer>
 
 <script src="script.js"></script>
