@@ -1,0 +1,66 @@
+[
+  {
+    "id": "mango",
+    "nombre": "Mango",
+    "emoji": "🥭",
+    "precio": 60,
+    "unidad": "libra",
+    "descripcion": "Mango dulce y jugoso, cosechado en su punto justo de madurez."
+  },
+  {
+    "id": "pina",
+    "nombre": "Piña",
+    "emoji": "🍍",
+    "precio": 120,
+    "unidad": "unidad",
+    "descripcion": "Piña fresca y aromática, cultivada al sol dominicano."
+  },
+  {
+    "id": "papaya",
+    "nombre": "Lechosa (Papaya)",
+    "emoji": "🍈",
+    "precio": 90,
+    "unidad": "unidad",
+    "descripcion": "Lechosa madura, suave y llena de sabor tropical."
+  },
+  {
+    "id": "aguacate",
+    "nombre": "Aguacate",
+    "emoji": "🥑",
+    "precio": 50,
+    "unidad": "unidad",
+    "descripcion": "Aguacate cremoso, ideal para ensaladas y desayunos."
+  },
+  {
+    "id": "coco",
+    "nombre": "Coco",
+    "emoji": "🥥",
+    "precio": 70,
+    "unidad": "unidad",
+    "descripcion": "Coco fresco recién bajado de la palma."
+  },
+  {
+    "id": "guineo",
+    "nombre": "Guineo (Plátano)",
+    "emoji": "🍌",
+    "precio": 35,
+    "unidad": "docena",
+    "descripcion": "Guineos maduros y dulces, cosechados de nuestra finca."
+  },
+  {
+    "id": "china",
+    "nombre": "China (Naranja)",
+    "emoji": "🍊",
+    "precio": 45,
+    "unidad": "libra",
+    "descripcion": "Chinas jugosas, perfectas para jugo natural."
+  },
+  {
+    "id": "guayaba",
+    "nombre": "Guayaba",
+    "emoji": "🍐",
+    "precio": 55,
+    "unidad": "libra",
+    "descripcion": "Guayaba fresca, aromática y rica en vitamina C."
+  }
+]
